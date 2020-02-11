@@ -2,12 +2,12 @@
 
 ## SqlServer Password
 
-``V8Gh2Y*zY7Mw``
+``DockerSql2017!``
 
 ## Dependencies
 
-dotnet add package AspNetCore.HealthChecks.SqlServer --version 3.0.0
+``dotnet add package AspNetCore.HealthChecks.SqlServer --version 3.0.0``
 
 ## SQL Docker Hub
 
-``docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=V8Gh2Y*zY7Mw' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-CU8-ubuntu``
+``docker run --name sqlserver2017v1 -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=DockerSql2017!" -e "MSSQL_PID=Express" -p 11433:1433 -d microsoft/mssql-server-linux:2017-latest``

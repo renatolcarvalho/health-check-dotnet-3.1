@@ -22,7 +22,7 @@ namespace healthcheck
             services.AddControllers();
             
             services.AddHealthChecks()
-                .AddSqlServer("")
+                .AddSqlServer(Configuration["ConnectionStrings:DefaultConnection"])
                 .AddCheck<DatabaseHealthCheck>("Database Health Check")
                 .AddCheck<IntegrationHealthCheck>("Integration Health Check");
         }
